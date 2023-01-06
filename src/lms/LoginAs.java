@@ -126,7 +126,7 @@ public class LoginAs extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         close();
-       SignUp su = new SignUp();
+       SignUpStud su = new SignUpStud();
        su.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
