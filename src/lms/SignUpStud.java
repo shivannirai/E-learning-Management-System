@@ -6,6 +6,7 @@ package lms;
 
 import java.awt.Insets;
 import java.awt.Toolkit;
+import java.awt.event.WindowEvent;
 
 /**
  *
@@ -18,7 +19,7 @@ public class SignUpStud extends javax.swing.JFrame {
      */
     public SignUpStud() {
         initComponents();
-        
+
 //        Toolkit  tk = Toolkit.getDefaultToolkit();
 //        int xsize = (int)tk.getScreenSize().getWidth();
 //        int ysize = (int)tk.getScreenSize().getHeight();
@@ -39,6 +40,7 @@ public class SignUpStud extends javax.swing.JFrame {
 
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -56,7 +58,8 @@ public class SignUpStud extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Student Sign Up");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(63, 81, 181));
@@ -66,6 +69,16 @@ public class SignUpStud extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("E-LEARNING");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 177, 44));
+
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton2.setText("Back");
+        jButton2.setFocusable(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 30, -1, -1));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 90));
 
@@ -101,7 +114,7 @@ public class SignUpStud extends javax.swing.JFrame {
 
         jLabel7.setForeground(new java.awt.Color(153, 153, 255));
         jLabel7.setText("Forgot Password?");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 150, -1));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 150, -1));
 
         jButton1.setBackground(new java.awt.Color(153, 153, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -121,8 +134,8 @@ public class SignUpStud extends javax.swing.JFrame {
         jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 260, 30));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\OneDrive\\Pictures\\Camera Roll\\76450-team-blue.jpg")); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 320, 290));
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\OneDrive\\Pictures\\Screenshots\\stud.png")); // NOI18N
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 40, 410, 410));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(153, 153, 153));
@@ -139,6 +152,18 @@ public class SignUpStud extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    public void close() {
+        WindowEvent we = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
+        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(we);
+
+    }
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        close();
+        LoginAs la = new LoginAs();
+        la.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,6 +203,7 @@ public class SignUpStud extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
